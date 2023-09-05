@@ -7,6 +7,7 @@ import json
 import requests
 import sys
 
+
 if __name__ == "__main__":
     api_url = "https://jsonplaceholder.typicode.com"
     emp_id = sys.argv[1]
@@ -15,9 +16,8 @@ if __name__ == "__main__":
                        params={"_expand": "user"})
     data = res.json()
     employee_name = data[0]["user"]["name"]
-# Create a CSV file and write the data to it
-with open('{}.csv'.format(emp_id), 'w', newline='') as csvfile:
-    spamwriter = csv.writer(csvfile, quoting=csv.QUOTE_NONNUMERIC)
-    for task in data:
-        spamwriter.writerow([emp_id, employee_name,
+    with open('{}.csv'.format(emp_id), 'w', newline='') as csvfile:
+        spamwriter = csv.writer(csvfile, quoting=csv.QUOTE_NONNUMERIC)
+        for task in data:
+            spamwriter.writerow([emp_id, employee_name,
                             task["completed"], task["title"]])
