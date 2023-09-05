@@ -12,7 +12,8 @@ if __name__ == "__main__":
     emp_dic = {}
 
     for user in data1:
-        res2 = requests.get(f"{api_url}/users/{user['id']}/todos")
+        res2 = requests.get("{}/users/{}/todos".format(api_url, user["id"]),
+                            params={"_expand": "user"})
         data2 = res2.json()
         emp_dic[user["id"]] = []
         for task in data2:
