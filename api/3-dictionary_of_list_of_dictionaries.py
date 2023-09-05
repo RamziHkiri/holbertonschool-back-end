@@ -16,7 +16,7 @@ if __name__ == "__main__":
         data2 = res2.json()
         emp_dic[user["id"]] = []
         for task in data2:
-            dic_task = {"username": user["username"],"task": task["title"],
+            dic_task = {"username": user["username"], "task": task["title"],
                         "completed": task["completed"]}
             emp_dic[user["id"]].append(dic_task)
 
