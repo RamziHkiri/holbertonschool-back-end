@@ -16,8 +16,8 @@ if __name__ == "__main__":
         data2 = res2.json()
         emp_dic[user["id"]] = []
         for task in data2:
-            dic_task = {"task": task["title"], "completed": task["completed"],
-                        "username": user["username"]}
+            dic_task = {"username": user["username"],"task": task["title"],
+                        "completed": task["completed"]}
             emp_dic[user["id"]].append(dic_task)
 
     with open("todo_all_employees.json", "w")as jsfile:
