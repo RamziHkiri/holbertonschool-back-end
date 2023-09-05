@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-Write a Python script that, using REST API
+"""Write a Python script that, using REST API
 returns the csv presentation
 """
 import csv
@@ -19,7 +18,7 @@ if __name__ == "__main__":
                        params={"_expand": "user"})
     data = res.json()
     employee_name = data[0]["user"]["name"]
-
+# Create a CSV file and write the data to it
 with open('{}.csv'.format(emp_id), 'w', newline='') as csvfile:
     spamwriter = csv.writer(csvfile, quoting=csv.QUOTE_NONNUMERIC)
     for task in data:
