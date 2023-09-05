@@ -15,7 +15,7 @@ if __name__ == "__main__":
     res = requests.get("{}/users/{}/todos".format(api_url, emp_id),
                        params={"_expand": "user"})
     data = res.json()
-    employee_name = data[0]["user"]["name"]
+    employee_name = data[0]["user"]["username"]
     with open('{}.csv'.format(emp_id), 'w', newline='') as csvfile:
         spamwriter = csv.writer(csvfile, quoting=csv.QUOTE_NONNUMERIC)
         for task in data:
