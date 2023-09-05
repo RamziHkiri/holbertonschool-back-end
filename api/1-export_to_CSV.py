@@ -3,7 +3,6 @@
 returns the csv presentation
 """
 import csv
-import json
 import requests
 import sys
 
