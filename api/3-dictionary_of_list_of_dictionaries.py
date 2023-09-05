@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     for user in data1:
         res2 = requests.get(f"{api_url}/users/{user['id']}/todos")
-        data2 = res2.json() 
+        data2 = res2.json()
         emp_dic[user["id"]] = []
         for task in data2:
             dic_task = {"task": task["title"], "completed": task["completed"],
