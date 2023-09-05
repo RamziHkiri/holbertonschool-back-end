@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Write a Python script that, using REST API"""
-
-import sys
-import requests
 import json
+import requests
+import sys
+
 
 if __name__ == "__main__":
     api_url = "https://jsonplaceholder.typicode.com"
