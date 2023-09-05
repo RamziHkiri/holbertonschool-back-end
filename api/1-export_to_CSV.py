@@ -21,4 +21,4 @@ if __name__ == "__main__":
         for task in data:
             spamwriter.writerow([emp_id,
                                  employee_name,
-                                 task["completed"], task["title"]])
+                                 str(task["completed"]), task["title"]])
