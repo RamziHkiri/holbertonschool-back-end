@@ -19,5 +19,6 @@ if __name__ == "__main__":
     with open('{}.csv'.format(emp_id), 'w', newline='') as csvfile:
         spamwriter = csv.writer(csvfile, quoting=csv.QUOTE_NONNUMERIC)
         for task in data:
-            spamwriter.writerow([emp_id, employee_name,
-                            task["completed"], task["title"]])
+            spamwriter.writerow([emp_id,
+                                 employee_name,
+                                 task["completed"], task["title"]])
