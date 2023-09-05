@@ -10,6 +10,8 @@ import sys
 
 
 if __name__ == "__main__":
+    """the main program"""
+
     api_url = "https://jsonplaceholder.typicode.com"
     emp_id = sys.argv[1]
 
